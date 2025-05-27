@@ -1,0 +1,89 @@
+1. Payment Gateway System
+Problem Statement:
+
+Design a Payment Gateway System where different payment methods (Credit Card, PayPal, UPI) can process payments.
+
+Requirements:
+Create an abstract class Payment with a pure virtual function makePayment(double amount).
+
+Create the following derived classes:
+
+CreditCard: Displays "Paid <amount> using Credit Card".
+
+PayPal: Displays "Paid <amount> using PayPal".
+
+UPI: Displays "Paid <amount> using UPI".
+
+In the main() function:
+
+Use Payment* pointers to call makePayment() for different types of payments.
+
+
+2. Notification System
+Problem Statement:
+
+Create a Notification System that can send notifications through different channels like Email, SMS, and Push Notification.
+
+Requirements:
+Create an abstract class Notification with a pure virtual function send(string message).
+
+Derived classes:
+
+EmailNotification: Sends message via Email.
+
+SMSNotification: Sends message via SMS.
+
+PushNotification: Sends message via Push.
+
+Use a Notification* pointer in main() to demonstrate runtime polymorphism.
+
+
+3. Student Marks Management
+Design a Student Marks Management System where a student's personal and academic information is hidden from outside access. The system should allow safe updates to the data and prevent illegal access or manipulation.
+
+Requirements:
+Create a class Student with the following private data members:
+
+string name
+
+int rollNumber
+
+float marks
+
+Provide public methods:
+
+void setDetails(string n, int r, float m) – to set values
+
+string getName() const – to get the name
+
+int getRollNumber() const – to get the roll number
+
+float getMarks() const – to get the marks
+
+void updateMarks(float m) – update marks safely, ensuring marks are in range (0-100)
+
+In main(), create a Student object, set its details, update the marks, and display the information.
+
+
+4. Library Book System
+Problem Statement:
+Design a simple system to manage library books where book details like title, author, and availability status are securely stored. The system should allow checking out and returning books through controlled methods, without giving direct access to modify the book's internal state.
+
+Requirements:
+Create a class Book with the following private members:
+
+string title
+
+string author
+
+bool isAvailable
+
+Provide the following public methods:
+
+void setBookDetails(string t, string a) – sets title and author, marks available
+
+void checkoutBook() – changes availability to false (only if available)
+
+void returnBook() – changes availability to true
+
+void showStatus() const – shows book details and current availability

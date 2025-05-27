@@ -1,0 +1,25 @@
+
+Inheritence in c++:
+===================
+* Extending the properties of parent(base) class t child(derived) class.
+* properties (data members + member functions).
+
+
+Types of inheritence:
+=====================
+1. single level - Parent -> child;
+2. multi level - grand parent -> parent -> child;
+3. multiple -  
+			Parent1       parent2
+					child
+4. hierarchical - 
+				Person
+		Student			Teacher
+	
+5. hybrid - 
+			the combination of more than one inheritence is called hybrid.
+			
+6. multipath -
+				Person
+		youtuber 		developer
+				co-devloper
