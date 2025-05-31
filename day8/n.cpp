@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+    string name, dob, state;
+    cout << "Enter your name: ";
+    getline(cin, name);
+
+    cout << "Enter your Date of Birth (DD/MM/YYYY): ";
+    getline(cin, dob);
+
+    cout << "Enter your state: ";
+    getline(cin, state);
+
+    srand(time(0));
+    int randomNum = 1000 + rand() % 9000;
+
+    char nameInitial = toupper(name[0]);
+    char stateInitial = toupper(state[0]);
+    string year = dob.substr(dob.length() - 4);
+
+    string registrationNumber = "";
+    registrationNumber += nameInitial;
+    registrationNumber += stateInitial;
+    registrationNumber += year;
+    registrationNumber += to_string(randomNum);
+
+    cout << "\nYour JEE Main Registration Number is: " << registrationNumber << endl;
+
+    return 0;
+}
